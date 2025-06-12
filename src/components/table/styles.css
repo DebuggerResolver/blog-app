@@ -1,0 +1,35 @@
+/* Table.css */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  thead tr {
+    background-color:"white";
+    color: "black";
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  td:last-child {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
