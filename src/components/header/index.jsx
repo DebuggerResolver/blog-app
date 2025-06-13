@@ -1,11 +1,12 @@
+import { useCallback } from "react";
 import Button from "../button";
 import { useNavigate } from "react-router-dom";
 
 const Header=()=>{
     const navigate=useNavigate();
-    const handleOnChange=()=>{
+    const handleOnChange=useCallback(()=>{
         navigate('/add');
-    }
+    },[]);
     return (
         <header style={{
             display:"flex",

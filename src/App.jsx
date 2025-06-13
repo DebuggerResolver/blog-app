@@ -1,7 +1,6 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Layout from "./components/layout";
 import Form from "./components/form";
-import ViewBlog from "./components/form"; // You can reuse Form for view
 
 function App() {
   return (

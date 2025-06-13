@@ -1,5 +1,5 @@
-
-const Button=({title,onChangeEvent=null})=>{
+import {memo} from 'react';
+const Button=memo(({title,onChangeEvent=null})=>{
     return (
         <div>
             <button style={{
@@ -15,6 +15,6 @@ const Button=({title,onChangeEvent=null})=>{
             >{title}</button>
         </div>
     );
-}
+})
 
 export default Button;

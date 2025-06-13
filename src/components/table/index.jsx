@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from "react";
+
 import { MdDelete } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 import { FaEye } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import {BlogsContext} from '../../context/store-blogs/index';
+
 const Table = () => {
-  const [blogs, setBlogs] = useState([]);
-  useEffect(() => {
-    const storedBlogs = JSON.parse(localStorage.getItem("blogs")) || [];
-    setBlogs(storedBlogs);
-  }, []);
+  const {blogs,setBlogs}=useContext(BlogsContext)
   const navigate=useNavigate();
   return (
     <table
@@ -32,7 +31,7 @@ const Table = () => {
           blogs.map((blog, index) => (
             <tr key={index}>
               <td style={{ border: "1px solid #ccc", padding: "8px" }}>
-                {index }
+                {index +1 }
               </td>
               <td style={{ border: "1px solid #ccc", padding: "8px" }}>
                 {blog.head}
