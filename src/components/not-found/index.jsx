@@ -1,9 +1,16 @@
 
 const NotFound=()=>{
     return (
-        <div>
+        <h1 style={{
+            display:"flex",
+            alignItems:"center",
+            justifyContent:"center",
+            height:"100vh",
+            fontFamily:"sans-serif",
+            fontWeight:"bolder"
+        }}>
             Not Found | 404
-        </div>
+        </h1>
     );
 }
 

@@ -1,5 +1,5 @@
 
-const Button=({title})=>{
+const Button=({title,onChangeEvent=null})=>{
     return (
         <div>
             <button style={{
@@ -10,7 +10,9 @@ const Button=({title})=>{
                 height:"35px",
                 padding:"5px",
                 textAlign:"center"
-            }}>{title}</button>
+            }}
+            onClick={onChangeEvent}
+            >{title}</button>
         </div>
     );
 }

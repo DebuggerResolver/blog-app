@@ -1,5 +1,11 @@
 import Button from "../button";
+import { useNavigate } from "react-router-dom";
+
 const Header=()=>{
+    const navigate=useNavigate();
+    const handleOnChange=()=>{
+        navigate('/add');
+    }
     return (
         <header style={{
             display:"flex",
@@ -11,7 +17,7 @@ const Header=()=>{
            <h1 style={{
             display:"inline"
            }}>Blog Admin Panel</h1>
-            <Button title={"Add New Blog"}/>
+            <Button title={"Add New Blog"} onChangeEvent={handleOnChange}/>
         </header>
     );
 }
