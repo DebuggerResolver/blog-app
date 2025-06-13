@@ -43,7 +43,7 @@ const Table = () => {
               <td style={{ border: "1px solid #ccc", padding: "8px" }}>
                 {blog.tags.join(", ")}
               </td>
-              <td style={{ border: "1px solid #ccc", padding: "10px", display:"flex" , columnGap:"5px" }}>
+              <td style={{ border: "1px solid #ccc", padding: "8px" }}>
                 <MdDelete
                   style={{
                     color: "#038cfc",
