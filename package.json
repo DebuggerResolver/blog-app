@@ -7,7 +7,28 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFiles": ["<rootDir>/jest.setup.js"],
+    "setupFilesAfterEnv": ["<rootDir>/src/setupTests.js"],
+    "moduleFileExtensions": ["js", "jsx", "json"],
+    "transform": {
+      "^.+\\.(js|jsx)$": "babel-jest"
+    },
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.(js|jsx)",
+      "<rootDir>/src/**/?(*.)(spec|test).(js|jsx)"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.(js|jsx)",
+      "!src/index.js",
+      "!src/reportWebVitals.js"
+    ]
   },
   "dependencies": {
     "lucide-react": "^0.514.0",
@@ -17,15 +38,23 @@
     "react-router-dom": "^7.6.2"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.27.2",
+    "@babel/preset-react": "^7.27.1",
     "@eslint/js": "^9.25.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",
     "autoprefixer": "^10.4.21",
+    "babel-jest": "^30.0.0",
     "eslint": "^9.25.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+    "jest": "^30.0.0",
+    "jest-environment-jsdom": "^30.0.0",
     "postcss": "^8.5.5",
     "tailwindcss": "^3.4.17",
     "vite": "^6.3.5"

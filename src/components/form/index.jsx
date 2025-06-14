@@ -70,7 +70,7 @@ const handleSubmit = useCallback((e) => {
     navigate('/');
   },[navigate]);
 
-  const handleReset = callback((e) => {
+  const handleReset = useCallback((e) => {
     e.preventDefault();
     setFormData({
       head: "",
